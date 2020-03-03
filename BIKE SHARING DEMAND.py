@@ -1,15 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[81]:
-
-
 import warnings
 warnings.filterwarnings('always')
 warnings.filterwarnings('ignore')
-
-
-# In[82]:
 
 
 import numpy as np
@@ -20,14 +11,9 @@ from matplotlib import style
 import seaborn as sns
 
 
-# In[83]:
-
 
 style.use('fivethirtyeight')
 sns.set(style='whitegrid',color_codes=True)
-
-
-# In[84]:
 
 
 train=pd.read_csv('train.csv')
@@ -40,24 +26,8 @@ test_df=test.copy()
 
 
 df.head()
-
-
-# In[86]:
-
-
 df.info()
-
-
-# In[87]:
-
-
 df.columns
-
-
-# In[88]:
-
-
-
 df['weather'].unique()
 
 
@@ -102,18 +72,7 @@ df['season'].unique()
 
 
 df.isnull().sum()
-
-
-# In[91]:
-
-
-
 import missingno as msno
-
-
-# In[92]:
-
-
 msno.matrix(df)
 
 
